@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson - AI Learning Navigator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+
+      <main class="main-content">
+        <div class="page-header" style="margin-bottom: 16px;">
+          <button class="btn-outline" onclick="window.location.href='mindmap.html'">
+            <i class="fas fa-arrow-left"></i> Back to Map
+          </button>
+        </div>
+
+        <div class="lesson-layout">
+          <aside class="lesson-nav">
+            <div class="section-header">
+              <h3>Computer Vision</h3>
+            </div>
+            <ul class="lesson-topic-list" id="lessonNavList"></ul>
+          </aside>
+
+          <article class="lesson-content">
+            <h1 id="lessonTitle">Loading lesson...</h1>
+            <div id="lessonBody"></div>
+          </article>
+
+          <aside class="lesson-meta">
+            <div id="lessonMeta"></div>
+            <div class="lesson-actions">
+              <button class="btn-outline" id="prevLessonBtn">Previous</button>
+              <button class="btn-primary" id="markCompleteBtn">Mark as Complete</button>
+              <button class="btn-outline" id="nextLessonBtn">Next Topic</button>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/learning.js"></script>
+  </body>
+</html>

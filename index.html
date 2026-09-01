@@ -1,189 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher AI</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Learning Navigator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body class="landing-shell">
+    <header class="landing-header">
+      <div class="logo-wrap">
+        <span class="logo-mark"><i class="fas fa-brain"></i></span>
+        <span>AI Learning Navigator</span>
+      </div>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsmind@0.8.7/style/jsmind.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+      <nav class="top-nav">
+        <a href="#features">Features</a>
+        <a href="#demo">Demo</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
 
-<body>
+      <button class="btn-outline" id="themeToggleButton" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+        Dark mode
+      </button>
+    </header>
 
-    <div class="app">
+    <main class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Turn documents into learning</p>
+        <h1>Turn Any Document Into Your <span class="text-accent">Personal Learning Journey</span></h1>
+        <p class="lead">
+          AI Learning Navigator transforms PDFs into structured learning maps, guided lessons, quizzes, and an AI tutor grounded in the document itself.
+        </p>
 
-        <aside class="sidebar">
-            <div class="logo">
-                <div class="logo-icon">✦</div>
-                <span>Teacher AI</span>
+        <div class="hero-features">
+          <span class="feature-chip"><i class="fas fa-sitemap text-accent"></i> Interactive maps</span>
+          <span class="feature-chip"><i class="fas fa-book-open text-accent"></i> Structured explanations</span>
+          <span class="feature-chip"><i class="fas fa-circle-check text-accent"></i> Quizzes</span>
+          <span class="feature-chip"><i class="fas fa-comments text-accent"></i> AI chat</span>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary" id="startUploadBtn">Get Started</button>
+          <button class="btn-outline" onclick="window.location.href='dashboard.html'">Explore Demo</button>
+        </div>
+      </div>
+
+      <div class="hero-preview" id="demo">
+        <div class="preview-card">
+          <div class="preview-top">
+            <div>
+              <strong>Computer Vision Fundamentals</strong>
             </div>
+            <span class="preview-swatch"></span>
+          </div>
 
-            <nav>
-                <a class="nav-item active" href="#">
-                    <span>⌂</span>
-                    <label>Home</label>
-                </a>
+          <div class="map-preview">
+            <div class="preview-node">Image Processing</div>
+            <div class="preview-node current">Filtering</div>
+            <div class="preview-node">Edge Detection</div>
+            <div class="preview-node">Pixels</div>
+            <div class="preview-node">Histograms</div>
+            <div class="preview-node">CNN</div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-                <a class="nav-item" href="#">
-                    <span>▣</span>
-                    <label>Library</label>
-                </a>
+    <section class="upload-panel">
+      <div class="upload-zone" id="uploadZone">
+        <input type="file" id="pdfInput" accept=".pdf" class="hidden-input" />
+        <button class="remove-file" aria-label="Remove file">
+          <i class="fas fa-xmark"></i>
+        </button>
 
-                <a class="nav-item" href="#">
-                    <span>◫</span>
-                    <label>Mind Maps</label>
-                </a>
+        <div class="upload-content">
+          <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <h2>Drag & Drop your PDF here</h2>
+          <p class="text-secondary">or click to browse files</p>
+          <div class="tag-sample mt-20">
+            <span class="feature-chip">Try "Computer Vision Fundamentals.pdf"</span>
+          </div>
+        </div>
 
-                <a class="nav-item" href="#">
-                    <span>◉</span>
-                    <label>Progress</label>
-                </a>
-            </nav>
+        <div class="file-meta"></div>
+        <div class="upload-status">Waiting for document</div>
+        <div class="upload-progress"><span class="upload-progress-bar"></span></div>
+      </div>
+    </section>
 
-            <div class="sidebar-bottom">
-                <a class="nav-item" href="#">
-                    <span>⚙</span>
-                    <label>Settings</label>
-                </a>
-
-                <a class="profile">
-                    <div class="avatar">A</div>
-                    <div>
-                        <strong>Ahmed</strong>
-                        <small>Student</small>
-                    </div>
-                </a>
-            </div>
-        </aside>
-
-        <main class="main">
-
-            <header class="topbar">
-                <div>
-                    <p class="date">Tuesday, 20 August</p>
-                    <h1>Good evening, <span>أحمد</span></h1>
-                </div>
-
-                <button class="notification">♢</button>
-            </header>
-
-            <section class="content">
-
-                <div class="welcome-card">
-                    <div>
-                        <span class="eyebrow">AI LEARNING ASSISTANT</span>
-                        <h2>Turn your notes into<br><span>smart mind maps.</span></h2>
-                        <p>
-                            Upload your study material and visualize the
-                            important concepts in seconds.
-                        </p>
-
-                        <button class="primary-btn">
-                            <span>＋</span>
-                            Upload PDF
-                        </button>
-                    </div>
-
-                    <div class="hero-icon">
-                        <div class="hero-circle">
-                            ✦
-                        </div>
-                    </div>
-                </div>
-
-                <section class="upload-section">
-
-                    <div class="section-heading">
-                        <div>
-                            <h2>Create a Mind Map</h2>
-                            <p>Upload a PDF to generate your learning map</p>
-                        </div>
-                    </div>
-
-                    <div class="upload-card">
-                        <input type="file" id="pdfInput" accept=".pdf">
-
-                        <div class="upload-icon">
-                            ↑
-                        </div>
-
-                        <h3>Drop your PDF here</h3>
-                        <p>or click to browse your files</p>
-
-                        <span class="file-types">
-                            PDF files only · Max 20 MB
-                        </span>
-
-                        <div id="fileName" class="file-name">
-                            No file selected
-                        </div>
-                    </div>
-
-                </section>
-
-                <section class="mindmap-section">
-
-                    <div class="section-heading map-heading">
-                        <div>
-                            <span class="eyebrow">GENERATED RESULT</span>
-                            <h2>Mind Map</h2>
-                        </div>
-
-                        <div class="map-actions">
-                            <button>−</button>
-                            <button>＋</button>
-                            <button>⛶</button>
-                        </div>
-                    </div>
-
-                    <div class="mindmap-container">
-                        <div id="jsmind_container"></div>
-
-                        <div class="map-label">
-                            <span class="status-dot"></span>
-                            AI Generated
-                        </div>
-                    </div>
-
-                </section>
-
-            </section>
-        </main>
-
-        <nav class="mobile-nav">
-
-            <a class="mobile-nav-item active" href="#">
-                <span>⌂</span>
-                <small>Home</small>
-            </a>
-
-            <a class="mobile-nav-item" href="#">
-                <span>▣</span>
-                <small>Library</small>
-            </a>
-
-            <a class="mobile-nav-item" href="#">
-                <span>◫</span>
-                <small>Maps</small>
-            </a>
-
-            <a class="mobile-nav-item" href="#">
-                <span>◉</span>
-                <small>Progress</small>
-            </a>
-
-            <a class="mobile-nav-item" href="#">
-                <span>◎</span>
-                <small>Profile</small>
-            </a>
-
-        </nav>
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/jsmind@0.8.7/es6/jsmind.js"></script>
-    <script src="script.js"></script>
-
-</body>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

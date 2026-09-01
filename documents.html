@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Documents - AI Learning Navigator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">Library</p>
+            <h1>My Documents</h1>
+          </div>
+          <button class="btn-primary" id="uploadNewDocumentBtn">
+            <i class="fas fa-upload"></i> Upload New Document
+          </button>
+        </div>
+
+        <div class="document-grid" id="documentGrid"></div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/documents.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+.lesson-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+}
+.lesson-content {
+  background: var(--bg-secondary);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  line-height: 1.6;
+}
+.lesson-meta {
+  background: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  height: fit-content;
+  position: sticky;
+  top: 40px;
+}

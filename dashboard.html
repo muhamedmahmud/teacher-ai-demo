@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - AI Learning Navigator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+
+      <main class="main-content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h1>Welcome back, Mohamed 👋</h1>
+          </div>
+          <button class="btn-primary" onclick="window.location.href='learning.html?lesson=image-filtering'">
+            <i class="fas fa-play"></i> Continue Learning
+          </button>
+        </header>
+
+        <section class="stats-grid" id="dashboardStats"></section>
+
+        <div class="content-grid">
+          <section class="card" style="padding: 22px;">
+            <div class="section-header">
+              <h3>Learning Progress</h3>
+              <span class="badge success">64% complete</span>
+            </div>
+            <div class="list-stack">
+              <div class="list-item">
+                <span>Current course</span>
+                <strong>Computer Vision Fundamentals</strong>
+              </div>
+              <div class="list-item">
+                <span>Topics completed</span>
+                <strong>8 / 12</strong>
+              </div>
+              <div class="list-item">
+                <span>Next milestone</span>
+                <strong>Feature Detection</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="card" style="padding: 22px;">
+            <div class="section-header">
+              <h3>Recent Activity</h3>
+            </div>
+            <div class="activity-list" id="recentActivity"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - AI Learning Navigator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">Preferences</p>
+            <h1>Settings</h1>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <section class="card settings-panel">
+            <h3>Appearance</h3>
+            <div class="setting-group">
+              <label class="toggle-option">
+                <input type="radio" name="themeMode" value="light" checked />
+                <span>Light mode</span>
+              </label>
+              <label class="toggle-option">
+                <input type="radio" name="themeMode" value="dark" />
+                <span>Dark mode</span>
+              </label>
+              <label class="toggle-option">
+                <input type="radio" name="themeMode" value="system" />
+                <span>System / default</span>
+              </label>
+            </div>
+          </section>
+
+          <section class="card settings-panel">
+            <h3>Learning</h3>
+            <div class="form-grid">
+              <label>
+                <span>Daily learning goal</span>
+                <input type="number" value="45" min="15" max="180" />
+              </label>
+              <label>
+                <span>Difficulty preference</span>
+                <select>
+                  <option>Balanced</option>
+                  <option>Beginner</option>
+                  <option>Intermediate</option>
+                  <option>Advanced</option>
+                </select>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" checked />
+                <span>Notifications enabled</span>
+              </label>
+            </div>
+          </section>
+
+          <section class="card settings-panel">
+            <h3>Profile</h3>
+            <div class="form-grid">
+              <label>
+                <span>Name</span>
+                <input type="text" value="Mohamed" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" value="mohamed@example.com" />
+              </label>
+              <label>
+                <span>Learning level</span>
+                <select>
+                  <option>Intermediate</option>
+                  <option>Beginner</option>
+                  <option>Advanced</option>
+                </select>
+              </label>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/settings.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress - AI Learning Navigator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">Analytics</p>
+            <h1>Progress Overview</h1>
+          </div>
+        </div>
+
+        <div class="progress-summary" id="progressSummary"></div>
+        <div class="content-grid progress-grid">
+          <section class="card">
+            <div class="section-header">
+              <h3>Weekly Activity</h3>
+            </div>
+            <div id="weeklyProgressChart" class="weekly-progress-chart"></div>
+          </section>
+
+          <section class="card">
+            <div class="section-header">
+              <h3>Strongest Topics</h3>
+            </div>
+            <div id="strongestTopics" class="list-stack"></div>
+          </section>
+        </div>
+
+        <div class="content-grid">
+          <section class="card">
+            <div class="section-header">
+              <h3>Topics Needing Attention</h3>
+            </div>
+            <div id="weakTopics" class="list-stack"></div>
+          </section>
+
+          <section class="card">
+            <div class="section-header">
+              <h3>Study Consistency</h3>
+            </div>
+            <div id="studyConsistency" class="list-stack"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/progress.js"></script>
+  </body>
+</html>

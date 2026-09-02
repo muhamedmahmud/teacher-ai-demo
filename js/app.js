@@ -71,8 +71,8 @@ function injectSidebar() {
   sidebar.innerHTML = `
     <div class="sidebar-header">
       <div class="brand">
-        <span class="brand-mark"><i class="fas fa-brain"></i></span>
-        <span>AI Navigator</span>
+        <img src="assets/images/logo.png" alt="Your Smart Teacher" class="brand-logo" />
+        <span class="brand-name"><span class="brand-initial">Y</span>our <span class="smart-word"><span class="brand-initial">S</span>mart</span> <span class="brand-initial">T</span>eacher</span>
       </div>
       <button class="mobile-menu-toggle" id="sidebarToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
         <i class="fas fa-bars"></i>

@@ -3,15 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Learning Navigator</title>
+    <title>Your Smart Teacher</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="landing-shell">
     <header class="landing-header">
       <div class="logo-wrap">
-        <span class="logo-mark"><i class="fas fa-brain"></i></span>
-        <span>AI Learning Navigator</span>
+        <img
+          src="assets/images/logo.png"
+          alt="Your Smart Teacher"
+          class="logo"
+        />
+        <div class="name-up">
+          <span class="brand-name"
+            ><span class="brand-initial">Y</span>our
+            <span class="smart-word"
+              ><span class="brand-initial">S</span>mart</span
+            >
+<span 
+              ><span class="brand-initial">T</span>eacher</span
+            >
+        </div>
       </div>
 
       <nav class="top-nav">
@@ -20,7 +42,11 @@
         <a href="#pricing">Pricing</a>
       </nav>
 
-      <button class="btn-outline" id="themeToggleButton" onclick="toggleTheme()">
+      <button
+        class="btn-outline"
+        id="themeToggleButton"
+        onclick="toggleTheme()"
+      >
         <i class="fas fa-moon"></i>
         Dark mode
       </button>
@@ -29,21 +55,40 @@
     <main class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Turn documents into learning</p>
-        <h1>Turn Any Document Into Your <span class="text-accent">Personal Learning Journey</span></h1>
+        <h1>
+          Turn Any Document Into Your
+          <span class="text-accent">Personal Learning Journey</span>
+        </h1>
         <p class="lead">
-          AI Learning Navigator transforms PDFs into structured learning maps, guided lessons, quizzes, and an AI tutor grounded in the document itself.
+          Your Smart Teacher transforms PDFs into structured learning maps,
+          guided lessons, quizzes, and an AI tutor grounded in the document
+          itself.
         </p>
 
         <div class="hero-features">
-          <span class="feature-chip"><i class="fas fa-sitemap text-accent"></i> Interactive maps</span>
-          <span class="feature-chip"><i class="fas fa-book-open text-accent"></i> Structured explanations</span>
-          <span class="feature-chip"><i class="fas fa-circle-check text-accent"></i> Quizzes</span>
-          <span class="feature-chip"><i class="fas fa-comments text-accent"></i> AI chat</span>
+          <span class="feature-chip"
+            ><i class="fas fa-sitemap text-accent"></i> Interactive maps</span
+          >
+          <span class="feature-chip"
+            ><i class="fas fa-book-open text-accent"></i> Structured
+            explanations</span
+          >
+          <span class="feature-chip"
+            ><i class="fas fa-circle-check text-accent"></i> Quizzes</span
+          >
+          <span class="feature-chip"
+            ><i class="fas fa-comments text-accent"></i> AI chat</span
+          >
         </div>
 
         <div class="hero-actions">
           <button class="btn-primary" id="startUploadBtn">Get Started</button>
-          <button class="btn-outline" onclick="window.location.href='dashboard.html'">Explore Demo</button>
+          <button
+            class="btn-outline"
+            onclick="window.location.href = 'dashboard.html'"
+          >
+            Explore Demo
+          </button>
         </div>
       </div>
 
@@ -80,13 +125,17 @@
           <h2>Drag & Drop your PDF here</h2>
           <p class="text-secondary">or click to browse files</p>
           <div class="tag-sample mt-20">
-            <span class="feature-chip">Try "Computer Vision Fundamentals.pdf"</span>
+            <span class="feature-chip"
+              >Try "Computer Vision Fundamentals.pdf"</span
+            >
           </div>
         </div>
 
         <div class="file-meta"></div>
         <div class="upload-status">Waiting for document</div>
-        <div class="upload-progress"><span class="upload-progress-bar"></span></div>
+        <div class="upload-progress">
+          <span class="upload-progress-bar"></span>
+        </div>
       </div>
     </section>
 
